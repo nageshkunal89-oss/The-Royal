@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Royal 3D Floral Wedding Invitation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Real-time 3D Water, Floating Lotus & Falling Wisteria Canvas -->
+    <canvas id="sceneCanvas"></canvas>
+
+    <!-- Hanging Purple Floral Canopy & Chandeliers (Top) -->
+    <div class="floral-canopy">
+        <div class="wisteria-vine v1"></div>
+        <div class="wisteria-vine v2"></div>
+        <div class="wisteria-vine v3"></div>
+        <div class="wisteria-vine v4"></div>
+        <div class="wisteria-vine v5"></div>
+        <div class="chandelier c1"></div>
+        <div class="chandelier c2"></div>
+        <div class="chandelier c3"></div>
+    </div>
+
+    <!-- Main Responsive Card Container -->
+    <div class="main-container" id="mainContainer">
+        
+        <!-- Top Page Switcher -->
+        <nav class="nav-bar">
+            <button class="tab-btn active" onclick="openPage(0)">1. Card</button>
+            <button class="tab-btn" onclick="openPage(1)">2. Couple</button>
+            <button class="tab-btn" onclick="openPage(2)">3. Events</button>
+            <button class="tab-btn" onclick="openPage(3)">4. Venue</button>
+        </nav>
+
+        <!-- Center Golden Wedding Board (Zooms in like video) -->
+        <div class="card-board zoom-entry" id="cardBoard">
+            <div class="gold-inner-border">
+
+                <!-- PAGE 0: MAIN COVER (Same as Video) -->
+                <div class="page active" id="page-0">
+                    <div class="top-motif">❦</div>
+                    <h1 class="main-title">Wedding</h1>
+                    <div class="date-box">Feb 12<sup>th</sup> 2027</div>
+
+                    <div class="schedule-block">
+                        <p class="s-title">Safa Bandhi</p>
+                        <p class="s-desc">10:30 AM • Banquet Entrance Level 1</p>
+
+                        <p class="s-title">Baarat</p>
+                        <p class="s-desc">12:30 PM • Main Gate of Venue</p>
+
+                        <p class="s-title">Varmala: 5 PM | Pheras: 7 PM</p>
+                        <p class="s-desc">Main Pool Area</p>
+                    </div>
+
+                    <button class="royal-btn" onclick="openPage(1)">Open Card ➔</button>
+                </div>
+
+                <!-- PAGE 1: BRIDE & GROOM -->
+                <div class="page" id="page-1">
+                    <h2 class="sec-title">The Royal Union</h2>
+                    <div class="line-ornament">❖</div>
+                    
+                    <h3 class="name-script">[Groom Name]</h3>
+                    <p class="parents">S/o Mr. [Father Name] & Mrs. [Mother Name]</p>
+                    
+                    <div class="weds-tag">Weds</div>
+                    
+                    <h3 class="name-script">[Bride Name]</h3>
+                    <p class="parents">D/o Mr. [Father Name] & Mrs. [Mother Name]</p>
+
+                    <div class="btn-group">
+                        <button class="royal-btn outline" onclick="openPage(0)">← Back</button>
+                        <button class="royal-btn" onclick="openPage(2)">Events ➔</button>
+                    </div>
+                </div>
+
+                <!-- PAGE 2: FUNCTIONS -->
+                <div class="page" id="page-2">
+                    <h2 class="sec-title">Wedding Functions</h2>
+                    <div class="line-ornament">❖</div>
+
+                    <div class="event-box">
+                        <strong>Haldi & Mehndi</strong>
+                        <span>Feb 11th • 11:00 AM • Poolside Lawn</span>
+                    </div>
+                    <div class="event-box">
+                        <strong>Sangeet & Ring Ceremony</strong>
+                        <span>Feb 11th • 7:30 PM • Grand Ballroom</span>
+                    </div>
+                    <div class="event-box">
+                        <strong>Grand Reception</strong>
+                        <span>Feb 12th • 8:00 PM Onwards</span>
+                    </div>
+
+                    <div class="btn-group">
+                        <button class="royal-btn outline" onclick="openPage(1)">← Back</button>
+                        <button class="royal-btn" onclick="openPage(3)">Venue ➔</button>
+                    </div>
+                </div>
+
+                <!-- PAGE 3: VENUE & REPLAY -->
+                <div class="page" id="page-3">
+                    <h2 class="sec-title">Wedding Venue</h2>
+                    <div class="line-ornament">❖</div>
+
+                    <p class="venue-title">The Lotus Pool Resort</p>
+                    <p class="parents">Jabalpur, Madhya Pradesh</p>
+                    <p class="blessing-line">Your presence will make our celebration complete.</p>
+
+                    <button class="royal-btn" style="margin-top: 14px;" onclick="replayAnimation()">↻ Replay 3D Zoom</button>
+
+                    <div class="btn-group">
+                        <button class="royal-btn outline" onclick="openPage(2)">← Back</button>
+                        <button class="royal-btn" onclick="openPage(0)">Home ↺</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Designer Credit -->
+        <footer class="credit-bar">
+            Created & Designed by <span>Kunal Nagesh</span>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
